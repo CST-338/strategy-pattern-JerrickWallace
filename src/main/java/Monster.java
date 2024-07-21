@@ -2,10 +2,17 @@ import java.util.HashMap;
 import java.util.Objects;
 
 public abstract class Monster {
-    private final Integer hp = 0;
-    private final Integer xp = 10;
-    private final Integer maxHP = 0;
+    private Integer hp = 0;
+    private Integer xp = 10;
+    private Integer maxHP = 0;
     private HashMap<String, Integer> items;
+
+    public Monster(Integer maxHP, Integer xp, HashMap<String, Integer> items) {
+        this.maxHP = maxHP;
+        hp = this.maxHP;
+        this.xp = xp;
+        this.items = items;
+    }
 
     public Integer getHp() {
         return hp;
