@@ -53,6 +53,6 @@ public abstract class Monster {
 
     @Override
     public String toString() {
-        return this.getClass().getSimpleName() + " has: hp=" + hp + "/" + maxHP;
+        return hp + "/" + maxHP;
     }
 }
