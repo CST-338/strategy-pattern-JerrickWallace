@@ -44,13 +44,14 @@ public abstract class Monster {
      * @return true if the target monster is still alive after the attack, false otherwise
      */
 
-    public boolean attackTarget(Monster target) {
+    public Integer attackTarget(Monster target) {
         if (attack != null) {
             int damage = attack.attack(target);
-            return target.takeDamage(damage);
+            target.takeDamage(damage);
+            return damage;
         }
 
-        return false;
+        return 0;
     }
 
     /**
